@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
-import Footer from '../components/Footer'
-import LayoutElement from '../styles/LayoutElement'
+import Footer from '../Footer'
+import LayoutElement from './layout.elements'
 
-import Navbar from './Navbar'
+import Navbar from '../Navbar'
 
-import Sidebar from './Sidebar'
+import Sidebar from '../Sidebar'
 
 // const Navbar = dynamic(() => import('./Navbar'), { ssr: true, loading: () => <p>...</p> })
 
@@ -28,7 +28,7 @@ const Layout: React.FC<LayoutProps> = ({ pageTitle, description = 'Next.js Blog'
         <meta property="og:title" content={pageTitle} key="ogtitle" />
         <meta property="og:description" content={description} key="ogdesc" />
 
-        <title>Next.js | {pageTitle}</title>
+        <title>{pageTitle} | Masažuotojas Romanas</title>
       </Head>
       <LayoutElement>
         <Sidebar isOpen={isOpen} toggle={toggle} />
